@@ -2,6 +2,12 @@ const express = require("express");
 const app = express();
 const PORT = 3000; // You can change the port number if needed
 
+app.use(
+  cors({
+    origin: "*",
+  })
+);
+
 function getRandomTodos() {
   const randomTodos = [];
   const remainingTodos = [...todoList]; // Create a copy of the todoList array
